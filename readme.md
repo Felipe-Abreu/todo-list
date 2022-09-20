@@ -37,6 +37,26 @@ Foi Utilizado Docker para facilidade e praticidade ao se usar o banco de dados.
 
 ## 📓 Requisitos do projeto
 
+Usuario<br>
+- email
+- senha
+- admin ou não
+
+Lista TODO<br>
+- data e hora de criação
+- descrição
+- prazo
+- status
+- data e hora que foi finalizada
+- data e hora da edição
+- pode editar prazo e descrição quando o status for diferente de finalizado
+
+Usuário pode ver todos os itens dele<br>
+Informar status de atrasado
+
+Administrador ve toda a lista contendo usuário que criou<br>
+Filtrar os que estão atrasados
+
 ## :computer: Pontos de Melhoria
 
 Durante o desenvolvimente me deparei com as seguintes dificuldade e que encontrei que poderiam ser pontos de melhoria:
