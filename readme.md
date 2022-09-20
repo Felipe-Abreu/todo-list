@@ -35,7 +35,9 @@ Para a execução do projeto é necessário ter docker instalado na máquina e o
 Foi Utilizado Docker para facilidade e praticidade ao se usar o banco de dados.
 <br>
 
-## :computer: Pontos de Melhoris
+## 📓 Requisitos do projeto
+
+## :computer: Pontos de Melhoria
 
 Durante o desenvolvimente me deparei com as seguintes dificuldade e que encontrei que poderiam ser pontos de melhoria:
 
