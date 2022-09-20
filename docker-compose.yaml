@@ -1,0 +1,32 @@
+version: '3'
+services:
+  todo_list:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: todo_list/api
+    links:
+      - mysql
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      - ADDITIONAL_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xmx1G -Xms128m -XX:MaxMetaspaceSize=128m
+      - PROFILE=dev
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:latest
+    container_name: "mysql"
+    ports:
+      - "3306:3306"
+    environment:
+      - DB_PORT=3306
+      - DB_NAME=todo
+      - DB_HOST=mysql
+      - MYSQL_ROOT_HOST= %
+      - MYSQL_DATABASE=todo_list
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - ./docker/volume_mysql:/var/lib/mysql
